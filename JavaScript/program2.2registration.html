@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration</title>
+<style>
+body{font-family:Arial;background:linear-gradient(to right,#74ebd5,#acb6e5);margin:0;display:flex;justify-content:center}
+form{background:white;width:380px;padding:20px;margin:20px;border-radius:10px;box-shadow:0 0 10px #0003}
+input[type=text],textarea{width:100%;padding:8px;margin:5px 0;box-sizing:border-box}
+.e{color:red;font-size:13px}
+button{padding:8px 15px;margin:10px 5px}
+</style>
+</head>
+<body>
+<form id="f" onsubmit="return v()">
+<h2 align="center">Registration Form</h2>
+
+First Name<input id="fn" type="text"><div id="e1" class="e"></div>
+Last Name<input id="ln" type="text"><div id="e2" class="e"></div>
+DOB<input id="dob" type="text" placeholder="DD-MM-YYYY"><div id="e3" class="e"></div>
+
+Gender<br>
+<input type="radio" name="g"> Male
+<input type="radio" name="g"> Female
+<div id="e4" class="e"></div>
+
+Email<input id="em" type="text"><div id="e5" class="e"></div>
+Phone<input id="ph" type="text"><div id="e6" class="e"></div>
+State<input id="st" type="text"><div id="e7" class="e"></div>
+Address<textarea id="ad"></textarea><div id="e8" class="e"></div>
+
+Courses<br>
+<input type="checkbox" name="c"> HTML
+<input type="checkbox" name="c"> CSS
+<input type="checkbox" name="c"> JS
+<div id="e9" class="e"></div>
+
+<button>Register</button>
+<button type="button" onclick="c()">Clear</button>
+</form>
+
+<script>
+function v(){
+let ok=true;
+document.querySelectorAll(".e").forEach(x=>x.innerHTML="");
+let check=(condition,id,message)=>{
+if(condition){document.getElementById(id).innerHTML=message;ok=false}
+};
+check(!fn.value.trim(),"e1","Required");
+check(!ln.value.trim(),"e2","Required");
+check(!/^\d{2}-\d{2}-\d{4}$/.test(dob.value),"e3","Invalid DOB");
+check(!document.querySelector('[name=g]:checked'),"e4","Select Gender");
+check(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value),"e5","Invalid Email");
+check(!/^\d{10}$/.test(ph.value),"e6","Invalid Phone");
+check(!st.value.trim(),"e7","Required");
+check(!ad.value.trim(),"e8","Required");
+check(!document.querySelector('[name=c]:checked'),"e9","Select Course");
+if(ok)alert("Registration Successful!");
+return false;
+}
+function c(){
+f.reset();
+document.querySelectorAll(".e").forEach(x=>x.innerHTML="");
+}
+</script>
+</body>
+</html>

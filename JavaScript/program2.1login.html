@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<style>
+body{font-family:Arial;background:linear-gradient(135deg,#2c3e50,#3498db);display:flex;justify-content:center;align-items:center;height:100vh;margin:0}
+div{background:white;padding:25px;width:300px;border-radius:10px;box-shadow:0 0 10px #0005}
+h2,#msg{text-align:center}
+h2{color:#2c3e50}
+input,button{width:100%;padding:10px;margin:8px 0;box-sizing:border-box}
+button{background:#3498db;color:white;border:0;border-radius:5px}
+#msg{color:red}
+</style>
+</head>
+<body>
+<div>
+<h2>Login</h2>
+<form onsubmit="login(event)">
+<input id="email" placeholder="Email" required>
+<input id="password" type="password" placeholder="Password" required>
+<button>Login</button>
+<p id="msg"></p>
+</form>
+</div>
+<script>
+function login(e){
+e.preventDefault();
+let a=email.value.trim(),b=password.value.trim();
+msg.innerHTML="";
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(a))
+msg.innerHTML="Invalid Email";
+else if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/.test(b))
+msg.innerHTML="Weak Password";
+else if(a=="admin@example.com" && b=="Admin@123")
+location="program2.1home.html";
+else
+msg.innerHTML="Invalid Login";
+}
+</script>
+</body>
+</html>
