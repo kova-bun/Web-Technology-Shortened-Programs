@@ -1,0 +1,12 @@
+<!ELEMENT Customer_Details (Customer*)>
+<!ELEMENT Customer (Id, Name, Email, Phone, Address)>
+<!ELEMENT Id (#PCDATA)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT Phone (#PCDATA)>
+<!ELEMENT Address (Street, City, State, Zip)>
+<!ELEMENT Street (#PCDATA)>
+<!ELEMENT City (#PCDATA)>
+<!ELEMENT State (#PCDATA)>
+<!ELEMENT Zip (#PCDATA)>
+<!ATTLIST Customer Id ID #REQUIRED>

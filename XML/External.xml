@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Customer_Details SYSTEM "External.dtd">
+<Customer_Details>
+<Customer>
+<Id>c001</Id>
+<Name>john DOE</Name>
+<Email>johndoe@example.Com</Email>
+<Phone>123-456-7890</Phone>
+<Address>
+<Street>123 MAIN ST</Street>
+<City>anytown</City>
+<State>ca</State>
+<Zip>12345</Zip>
+</Address>
+</Customer>
+
+<Customer Id="C002">
+<Id>c002</Id>
+<Name>jane SMITH</Name>
+<Email>janesmith@example.Com</Email>
+<Phone>098-765-4321</Phone>
+<Address>
+<Street>456 ELM ST</Street>
+<City>othertown</City>
+<State>tx</State>
+<Zip>67890</Zip>
+</Address>
+</Customer>
+</Customer_Details>

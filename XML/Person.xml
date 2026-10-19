@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ex.xsl"?>
+
+<person_details>
+
+    <person>
+        <name>Saistha</name>
+        <phone>12345567890</phone>
+        <address>147 Peter's Road Royapettah</address>
+        <email>saistha.n@measiit.edu.in</email>
+    </person>
+
+    <person>
+        <name>Arfath</name>
+        <phone>1234557654</phone>
+        <address>147 Peter's Road Royapettah</address>
+        <email>arfath@measiit.edu.in</email>
+    </person>
+
+    <person>
+        <name>Mohammed</name>
+        <phone>3456567890</phone>
+        <address>147 Peter's Road Royapettah</address>
+        <email>mohammed@measiit.edu.in</email>
+    </person>
+
+</person_details>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library SYSTEM "books.dtd">
+<?xml-stylesheet type="text/xsl" href="books.xsl"?>
+<library>
+<book>
+<Tittle>java programming</Tittle>
+<Author>John Doe</Author>
+<ISBN>123456789</ISBN>
+<Publisher>Pearson Education</Publisher>
+<Edition>3rd</Edition>
+<Price>450</Price>
+</book>
+<book>
+<Tittle>web development</Tittle>
+<Author>Marry Johnson</Author>
+<ISBN>9786545645</ISBN>
+<Publisher>O'reilly</Publisher>
+<Edition>3rd</Edition>
+<Price>550</Price>
+</book>
+<book>
+<Tittle>Data structure</Tittle>
+<Author>David Lee</Author>
+<ISBN>908786567</ISBN>
+<Publisher>Mc Graw Hill</Publisher>
+<Edition>1st</Edition>
+<Price>550</Price>
+</book>
+</library>
